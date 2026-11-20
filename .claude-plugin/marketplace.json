@@ -1,0 +1,11 @@
+{
+  "name": "mmm-huisstijl",
+  "owner": { "name": "Stichting Mensen Met Mogelijkheden" },
+  "plugins": [
+    {
+      "name": "mmm-huisstijl",
+      "source": "./",
+      "description": "Huisstijl en brand voice van Stichting Mensen Met Mogelijkheden"
+    }
+  ]
+}

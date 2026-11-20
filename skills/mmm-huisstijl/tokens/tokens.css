@@ -1,0 +1,96 @@
+/* Mensen Met Mogelijkheden: CSS custom properties, generated from tokens.json. Do not edit by hand. */
+@font-face { font-family: 'Atkinson Hyperlegible Next'; font-style: normal; font-weight: 200 800; font-display: swap; src: url(../fonts/atkinson-hyperlegible-next-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito'; font-style: normal; font-weight: 200 1000; font-display: swap; src: url(../fonts/nunito-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Titillium Web'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/titillium-web-latin-600.woff2) format('woff2'); }
+@font-face { font-family: 'Titillium Web'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/titillium-web-latin-700.woff2) format('woff2'); }
+:root, [data-theme="licht"] {
+  --rood: #e30613;
+  --rood-donker: #b8050f;
+  --blauw: #009fe3;
+  --indigo: #312783;
+  --geel: #ffed00;
+  --groen: #96c11f;
+  --paars: #662483;
+  --paars-licht: #b469d6;
+  --blauw-licht: #dff2fb;
+  --blauw-zacht: #f1f9fd;
+  --groen-licht: #eef5dc;
+  --paars-licht-vlak: #efe4f3;
+  --geel-licht: #fff8c4;
+  --room: #fbfaf7;
+  --room-donker: #f2efe8;
+  --band: #f6f2ea;
+  --kaart: #ffffff;
+  --tekst: #241f1a;
+  --tekst-kop: #241f1a;
+  --tekst-mild: #5c554c;
+  --tekst-zacht: #857c70;
+  --rand: #e6e0d4;
+  --rand-sterk: #b9ae9c;
+  --veldrand: #8f8576;
+  --donker-tekst: #f0e6da;
+  --donker-tekst-mild: #d8cdc0;
+  --donker-tekst-zacht: #b3a89a;
+  --succes: #4f7a0c;
+  --succes-tekst: #3f6209;
+  --succes-vlak: #f3f8e6;
+  --succes-rand: #b8d66a;
+  --waarschuwing: #8a6d00;
+  --waarschuwing-tekst: #7a5c00;
+  --waarschuwing-vlak: #fff9db;
+  --waarschuwing-rand: #efd25c;
+  --fout-tekst: #a1040d;
+  --fout-vlak: #fdeced;
+  --fout-rand: #f2a3a8;
+  --rood-op-donker: #ff4a55;
+  --indigo-op-donker: #9d95f0;
+  --geel-rand: #c9b800;
+  --font-merk: "Titillium Web", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-kop: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-tekst: "Atkinson Hyperlegible Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  --ruimte-1: 0.5rem;
+  --ruimte-2: 1rem;
+  --ruimte-3: 1.5rem;
+  --ruimte-4: 2rem;
+  --ruimte-5: 2.5rem;
+  --ruimte-6: 3rem;
+  --ruimte-band: 5.5rem;
+  --hoek: 4px;
+  --hoek-klein: 2px;
+  --rond: 50%;
+  --foto-vlak: 14px 14px 0 #ffed00;
+  --focus: 0 0 0 3px #312783;
+  --breedte-max: 1160px;
+  --regel-max: 70ch;
+  --knop-hoogte-min: 56px;
+  --rand-dik: 3px;
+  --blokje-zwevend: 42px;
+  --zweef-duur: 9s;
+}
+[data-theme="donker"], [data-bs-theme="dark"] {
+  --rood-donker: #ff7a82;
+  --blauw-licht: #0a3446;
+  --blauw-zacht: #1b2428;
+  --room: #1a1612;
+  --room-donker: #2f2924;
+  --band: #2f2924;
+  --kaart: #26211c;
+  --tekst: #e7e1d8;
+  --tekst-kop: #f4efe7;
+  --tekst-mild: #b9b0a4;
+  --tekst-zacht: #a79e92;
+  --rand: #3a332c;
+  --rand-sterk: #6f675d;
+  --veldrand: #5a5148;
+}
+.kleurkop-titel { font-family: var(--font-merk); font-size: 6rem; line-height: 0.95; font-weight: 700; letter-spacing: -0.03em; }
+.paginatitel { font-family: var(--font-merk); font-size: 4.5rem; line-height: 1.02; font-weight: 700; letter-spacing: -0.01em; }
+.woordmerk { font-family: var(--font-merk); font-size: 1.25rem; line-height: 1.02; font-weight: 600; }
+.h2 { font-family: var(--font-kop); font-size: 2.6rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.015em; }
+.h3 { font-family: var(--font-kop); font-size: 1.35rem; line-height: 1.1; font-weight: 800; }
+.citaat { font-family: var(--font-kop); font-size: 1.9rem; line-height: 1.3; font-weight: 700; }
+.knop { font-family: var(--font-kop); font-size: 1.125rem; line-height: 1.2; font-weight: 800; }
+.intro { font-family: var(--font-tekst); font-size: 1.25rem; line-height: 1.65; font-weight: 400; }
+.lopende-tekst { font-family: var(--font-tekst); font-size: 1.125rem; line-height: 1.65; font-weight: 400; }
+.label { font-family: var(--font-tekst); font-size: 1rem; line-height: 1.4; font-weight: 700; }
+.klein { font-family: var(--font-tekst); font-size: 0.9rem; line-height: 1.5; font-weight: 400; }
