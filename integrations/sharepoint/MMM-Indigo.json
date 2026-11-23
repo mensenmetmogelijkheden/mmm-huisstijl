@@ -1,0 +1,29 @@
+{
+  "name": "MMM Indigo",
+  "isInverted": false,
+  "palette": {
+    "themePrimary": "#312783",
+    "themeLighterAlt": "#f5f4f9",
+    "themeLighter": "#dedceb",
+    "themeLight": "#c1beda",
+    "themeTertiary": "#8882b7",
+    "themeSecondary": "#4a4192",
+    "themeDarkAlt": "#2c2376",
+    "themeDark": "#251e64",
+    "themeDarker": "#1c174c",
+    "accent": "#e30613",
+    "neutralLighterAlt": "#fbfaf7",
+    "neutralLighter": "#f6f2ea",
+    "neutralLight": "#f2efe8",
+    "neutralQuaternaryAlt": "#e6e0d4",
+    "neutralQuaternary": "#ddd6c8",
+    "neutralTertiaryAlt": "#b9ae9c",
+    "neutralTertiary": "#9a9083",
+    "neutralSecondary": "#5c554c",
+    "neutralPrimaryAlt": "#3a342d",
+    "neutralPrimary": "#241f1a",
+    "neutralDark": "#1a1612",
+    "black": "#0f0c0a",
+    "white": "#ffffff"
+  }
+}

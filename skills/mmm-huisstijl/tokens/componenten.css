@@ -1,0 +1,127 @@
+/* Mensen Met Mogelijkheden: static component styles, rebuilt by hand from the
+   MMM website stylesheet (2026-11-17). Uses only the custom properties in tokens.css. */
+.mmm { font-family: var(--font-tekst); font-size: 1.125rem; line-height: 1.65; color: var(--tekst); background: var(--room); padding: var(--ruimte-3); }
+.mmm h2 { font-family: var(--font-kop); font-weight: 800; color: var(--rood-donker); font-size: 1.8rem; line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 var(--ruimte-2); }
+.mmm h2::before { content: ""; display: inline-block; width: .55em; height: .55em; margin-right: .35em; background: var(--kamer, var(--rood)); border-radius: var(--hoek-klein); vertical-align: .08em; }
+.mmm h3 { font-family: var(--font-kop); font-weight: 800; font-size: 1.35rem; line-height: 1.1; margin: 0 0 .5rem; color: var(--tekst-kop); }
+.mmm p { margin: 0 0 var(--ruimte-2); max-width: var(--regel-max); }
+.mmm :focus-visible { outline: 3px solid var(--indigo); outline-offset: 3px; }
+
+/* Button */
+.mmm-knoppen { display: flex; flex-wrap: wrap; gap: var(--ruimte-2); align-items: center; }
+.mmm-knop { display: inline-flex; align-items: center; gap: var(--ruimte-1); font-family: var(--font-kop); font-weight: 800; font-size: 1.125rem; line-height: 1.2; padding: .85rem 1.7rem; border-radius: var(--hoek); text-decoration: none; border: 2px solid transparent; cursor: pointer; }
+.mmm-knop--primair { background: var(--rood); color: #fff; }
+.mmm-knop--primair:hover { background: var(--indigo); }
+.mmm-knop--rand { background: transparent; color: var(--rood-donker); border-color: var(--rood-donker); }
+.mmm-knop--rand:hover { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+.mmm-knop--taal { background: transparent; color: var(--indigo); border-color: var(--indigo); font-size: 1rem; padding: .55rem 1rem; }
+.mmm-knop--taal:hover { background: var(--indigo); color: #fff; }
+[data-theme="donker"] .mmm-knop--taal, [data-bs-theme="dark"] .mmm-knop--taal { color: var(--indigo-op-donker); border-color: var(--indigo-op-donker); }
+[data-theme="donker"] .mmm-knop--taal:hover, [data-bs-theme="dark"] .mmm-knop--taal:hover { background: var(--indigo-op-donker); color: var(--room); }
+[data-theme="donker"] .mmm :focus-visible, [data-bs-theme="dark"] .mmm :focus-visible { outline-color: var(--indigo-op-donker); }
+
+/* Kleurkop */
+.mmm-kleurkop { --vlak: var(--indigo); --ink: #fff; background: var(--vlak); color: var(--ink); padding: var(--ruimte-5) var(--ruimte-3) var(--ruimte-4); }
+.mmm-kleurkop[data-kleur="wonen"] { --vlak: var(--blauw); --ink: var(--tekst); }
+.mmm-kleurkop[data-kleur="dagbesteding"] { --vlak: var(--groen); --ink: var(--tekst); }
+.mmm-kleurkop[data-kleur="activiteiten"] { --vlak: var(--paars); }
+.mmm-kleurkop[data-kleur="thuis"] { --vlak: var(--geel); --ink: var(--tekst); }
+.mmm-kleurkop h1 { font-family: var(--font-merk); font-weight: 700; font-size: 4rem; line-height: .95; letter-spacing: -.03em; margin: 0; color: var(--ink); }
+.mmm-kleurkop .mmm-blokjes { margin-top: 1.2rem; }
+.mmm-kleurkop .mmm-blokjes span { background: var(--ink); }
+
+/* Row of squares and brand stripe */
+.mmm-blokjes { display: flex; gap: .6rem; }
+.mmm-blokjes span { width: 1.1rem; height: 1.1rem; border-radius: var(--hoek-klein); }
+.mmm-blokjes--logo span:nth-child(1), .mmm-strip span:nth-child(1) { background: var(--rood); }
+.mmm-blokjes--logo span:nth-child(2), .mmm-strip span:nth-child(2) { background: var(--blauw); }
+.mmm-blokjes--logo span:nth-child(3), .mmm-strip span:nth-child(3) { background: var(--indigo); }
+.mmm-blokjes--logo span:nth-child(4), .mmm-strip span:nth-child(4) { background: var(--geel); }
+.mmm-blokjes--logo span:nth-child(5), .mmm-strip span:nth-child(5) { background: var(--groen); }
+.mmm-blokjes--logo span:nth-child(6), .mmm-strip span:nth-child(6) { background: var(--paars); }
+.mmm-strip { display: flex; height: 6px; }
+.mmm-strip span { flex: 1; }
+
+/* Card */
+.mmm-kaartjes { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: var(--ruimte-5); }
+.mmm-kaartje { border-top: var(--rand-dik) solid var(--k, var(--tekst)); padding-top: 1.25rem; display: flex; flex-direction: column; }
+.mmm-kaartje[data-kleur="wonen"] { --k: var(--blauw); }
+.mmm-kaartje[data-kleur="dagbesteding"] { --k: var(--groen); }
+.mmm-kaartje[data-kleur="activiteiten"] { --k: var(--paars); }
+.mmm-kaartje[data-kleur="thuis"] { --k: var(--geel); }
+/* Not about one kind of service: logo colours take turns, as decoration */
+.mmm-kaartjes > .mmm-kaartje:not([data-kleur]):nth-child(5n+1) { --k: var(--blauw); }
+.mmm-kaartjes > .mmm-kaartje:not([data-kleur]):nth-child(5n+2) { --k: var(--indigo); }
+.mmm-kaartjes > .mmm-kaartje:not([data-kleur]):nth-child(5n+3) { --k: var(--groen); }
+.mmm-kaartjes > .mmm-kaartje:not([data-kleur]):nth-child(5n+4) { --k: var(--paars); }
+.mmm-kaartjes > .mmm-kaartje:not([data-kleur]):nth-child(5n+5) { --k: var(--geel); }
+.mmm-kaartje p { color: var(--tekst-mild); font-size: 1rem; }
+.mmm-kaartje a { color: var(--rood-donker); font-weight: 700; margin-top: auto; text-underline-offset: .18em; }
+.mmm-chip { width: 2.75rem; height: 2.75rem; border-radius: var(--hoek); background: var(--k, var(--rood)); margin-bottom: .9rem; }
+/* Portrait of one person: round, the exception to the 4px corner */
+.mmm-portret { display: block; width: 5.5rem; height: 5.5rem; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
+
+/* Form field */
+.mmm-veld { margin-bottom: 1.2rem; max-width: 26rem; }
+.mmm-veld label { display: block; font-weight: 700; font-size: 1rem; margin-bottom: .4rem; }
+.mmm-veld input, .mmm-veld select, .mmm-veld textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; padding: .75rem 1rem; border: 1.5px solid var(--veldrand); border-radius: var(--hoek); background: var(--room); color: var(--tekst); }
+.mmm-veld input:focus, .mmm-veld select:focus, .mmm-veld textarea:focus { outline: 3px solid var(--indigo); outline-offset: 1px; border-color: var(--indigo); background: var(--kaart); }
+.mmm-veld .mmm-hulp { font-size: .9rem; color: var(--tekst-mild); margin: .3rem 0 0; }
+
+/* Alert */
+.mmm-melding { border: 1px solid; border-radius: var(--hoek); padding: .8rem 1rem; margin-bottom: .75rem; font-size: 1rem; max-width: 34rem; }
+.mmm-melding--succes { background: var(--succes-vlak); color: var(--succes-tekst); border-color: var(--succes-rand); }
+.mmm-melding--waarschuwing { background: var(--waarschuwing-vlak); color: var(--waarschuwing-tekst); border-color: var(--waarschuwing-rand); }
+.mmm-melding--fout { background: var(--fout-vlak); color: var(--fout-tekst); border-color: var(--fout-rand); }
+
+/* Photo on a colour block */
+.mmm-fotovlak { display: inline-block; border-radius: var(--hoek); box-shadow: 14px 14px 0 var(--k, var(--geel)); }
+.mmm-fotovlak[data-kleur="wonen"] { --k: var(--blauw); }
+.mmm-fotovlak[data-kleur="dagbesteding"] { --k: var(--groen); }
+.mmm-fotovlak[data-kleur="activiteiten"] { --k: var(--paars); }
+
+/* Floating squares, as on the MMM-Web sign-in page */
+.mmm-zwevend { position: relative; overflow: hidden; background: var(--room); height: 220px; }
+.mmm-zwevend .b { position: absolute; width: var(--blokje-zwevend); height: var(--blokje-zwevend); border-radius: 3px; box-shadow: 0 1px 0 rgba(0,0,0,.08); animation: mmm-zweef var(--zweef-duur) ease-in-out infinite; }
+.mmm-zwevend .b-indigo { background: var(--indigo); top: 14%; left: 8%;  rotate: -2deg; }
+.mmm-zwevend .b-blauw  { background: var(--blauw);  top: 48%; left: 27%; rotate: 5deg;  animation-delay: -2s; }
+.mmm-zwevend .b-groen  { background: var(--groen);  top: 24%; left: 47%; rotate: 8deg;  animation-delay: -4s; }
+.mmm-zwevend .b-rood   { background: var(--rood);   top: 52%; left: 56%; rotate: -6deg; animation-delay: -6s; width: 38px; height: 38px; }
+.mmm-zwevend .b-paars  { background: var(--paars);  top: 36%; left: 78%; rotate: -4deg; animation-delay: -3s; }
+.mmm-zwevend .b-geel   { background: var(--geel);   top: 66%; left: 90%; rotate: 3deg;  animation-delay: -5s; box-shadow: inset 0 0 0 2px var(--geel-rand); }
+@keyframes mmm-zweef { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+@media (prefers-reduced-motion: reduce) { .mmm-zwevend .b { animation: none; } }
+
+/* Legend: Elk blokje is iets wat we doen. */
+.mmm-legenda-kop { font-family: var(--font-kop); font-weight: 800; font-size: 1rem; margin: 0 0 .6rem; color: var(--tekst-kop); }
+.mmm-legenda { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; padding: 0; list-style: none; font-family: var(--font-kop); font-weight: 700; font-size: .9rem; color: var(--tekst); }
+.mmm-legenda li { display: inline-flex; align-items: center; gap: 8px; }
+.mmm-legenda .sq { display: inline-block; width: 14px; height: 14px; border-radius: 2px; }
+.mmm-legenda .sq-blauw { background: var(--blauw); }
+.mmm-legenda .sq-groen { background: var(--groen); }
+.mmm-legenda .sq-paars { background: var(--paars); }
+.mmm-legenda .sq-geel  { background: var(--geel); box-shadow: inset 0 0 0 1.5px var(--geel-rand); }
+
+/* Service stripe (MMM-Web top bar) */
+.mmm-aanbodstrip { height: 3px; background: linear-gradient(to right, var(--blauw) 0 25%, var(--groen) 25% 50%, var(--paars) 50% 75%, var(--geel) 75% 100%); }
+
+/* Presentation patterns: eyebrow, slide title, signature, key message, key figures, timeline */
+.mmm-bovenkop { font-family: var(--font-kop); font-weight: 800; font-size: .9rem; letter-spacing: .14em; text-transform: uppercase; color: var(--k, var(--rood-donker)); margin: 0 0 .35rem; }
+.mmm-bovenkop[data-kleur="wonen"] { --k: var(--blauw); } .mmm-bovenkop[data-kleur="activiteiten"] { --k: var(--paars); }
+.mmm-diatitel { font-family: var(--font-merk); font-weight: 700; font-size: 2rem; line-height: 1.1; color: var(--tekst-kop); margin: 0 0 1rem; }
+.mmm-diatitel em { font-style: normal; color: var(--rood); }
+.mmm-signatuur { position: absolute; top: 18px; right: 22px; width: 34px; height: 30px; }
+.mmm-signatuur span { position: absolute; border-radius: 2px; }
+.mmm-signatuur span:nth-child(1) { width: 16px; height: 16px; left: 0; top: 0; background: var(--groen); rotate: -8deg; }
+.mmm-signatuur span:nth-child(2) { width: 12px; height: 12px; left: 18px; top: 14px; background: var(--rood); rotate: 6deg; }
+.mmm-dia { position: relative; background: var(--room); border: 1px solid var(--rand); border-radius: var(--hoek); padding: 28px 32px; }
+.mmm-kernboodschap { background: var(--kaart); border-left: 3px solid var(--rood); padding: .8rem 1rem; font-size: .95rem; max-width: 46rem; }
+.mmm-kernboodschap strong { font-weight: 700; }
+.mmm-kerncijfers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.mmm-kerncijfer { background: var(--kaart); border-radius: var(--hoek); padding: 14px 16px; }
+.mmm-kerncijfer .sq { display: block; width: 12px; height: 12px; border-radius: 2px; background: var(--k, var(--rood)); margin-bottom: 8px; }
+.mmm-kerncijfer .getal { font-family: var(--font-merk); font-weight: 700; font-size: 2.3rem; line-height: 1; color: var(--tekst-kop); }
+.mmm-kerncijfer .uitleg { font-size: .9rem; color: var(--tekst-mild); margin-top: 6px; }
+.mmm-tijdlijn { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.mmm-tijdlijn > div { border-top: 4px solid var(--k); padding-top: 8px; font-size: .9rem; color: var(--tekst); }
+.mmm-tijdlijn b { display: block; font-family: var(--font-kop); font-weight: 800; font-size: .95rem; margin-bottom: 4px; }
