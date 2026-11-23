@@ -1,6 +1,6 @@
 ---
 name: mmm-huisstijl
-description: Huisstijl en brand voice van Stichting Mensen Met Mogelijkheden (MMM). Gebruik bij alles wat er namens MMM uitziet of klinkt - ontwerpen, documenten, presentaties, website, MMM-Web, social media, posters, flyers, e-mails en andere teksten - voor kleuren, letters, logo, vormregels en toon.
+description: Huisstijl en toon van Mensen Met Mogelijkheden (MMM): kleuren, letters, logo, vorm en schrijfwijze. Gebruik bij alles wat namens MMM wordt gemaakt of geschreven, van tekst en ontwerp tot presentatie.
 ---
 
 # Huisstijl Mensen Met Mogelijkheden
