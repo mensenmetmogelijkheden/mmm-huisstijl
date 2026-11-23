@@ -4,8 +4,9 @@
 Writes two files to the output directory (default: dist/):
 
 - mmm-huisstijl.zip: the whole skill folder as the top-level directory
-  (mmm-huisstijl/SKILL.md, ...). For Claude and ChatGPT, which expect the
-  skill folder itself inside the archive.
+  (mmm-huisstijl/SKILL.md, ...), plus the Office and e-mail templates from
+  templates/ under mmm-huisstijl/templates/, so scripts/template.py can fill them.
+  For Claude and ChatGPT, which expect the skill folder itself inside the archive.
 - mmm-huisstijl-copilot.zip: SKILL.md at the root of the archive, with the
   text reference files and tokens only. For Microsoft 365 Copilot, which
   expects SKILL.md at the root.
@@ -24,6 +25,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SKILL_DIR = ROOT / "skills" / "mmm-huisstijl"
+TEMPLATES_DIR = ROOT / "templates"
+# Ready-made templates only; templates/source/ holds the scripts that build them.
+TEMPLATE_SUFFIXES = (".dotx", ".potx", ".html")
 NAME = SKILL_DIR.name
 # Claude.ai accepts at most 200 characters; the Agent Skills specification allows 1024.
 MAX_DESCRIPTION = 200
@@ -59,10 +63,17 @@ def check_metadata():
 
 def files(parts=None):
     for path in sorted(SKILL_DIR.rglob("*")):
-        if not path.is_file() or path.name.startswith("."):
+        if not path.is_file() or path.name.startswith(".") or "__pycache__" in path.parts or path.suffix == ".pyc":
             continue
         rel = path.relative_to(SKILL_DIR)
         if parts is None or rel.parts[0] in parts:
+            yield path, rel.as_posix()
+
+
+def templates():
+    for path in sorted(TEMPLATES_DIR.rglob("*")):
+        rel = path.relative_to(TEMPLATES_DIR)
+        if path.is_file() and path.suffix in TEMPLATE_SUFFIXES and rel.parts[0] != "source":
             yield path, rel.as_posix()
 
 
@@ -80,7 +91,11 @@ def main():
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "dist"
     out.mkdir(parents=True, exist_ok=True)
     check_metadata()
-    write_zip(out / f"{NAME}.zip", ((p, f"{NAME}/{rel}") for p, rel in files()))
+    full = [(p, f"{NAME}/{rel}") for p, rel in files()]
+    full += [(p, f"{NAME}/templates/{rel}") for p, rel in templates()]
+    if not any(arc.endswith(".dotx") for _, arc in full):
+        sys.exit("no templates found in templates/")
+    write_zip(out / f"{NAME}.zip", full)
     write_zip(out / f"{NAME}-copilot.zip", files(COPILOT_PARTS))
     for z in (f"{NAME}.zip", f"{NAME}-copilot.zip"):
         print(f"{out / z}: {(out / z).stat().st_size} bytes")

@@ -13,6 +13,8 @@
 - **Zelf**: dubbelklik op een `.dotx` of `.potx`; Word of PowerPoint maakt dan een nieuw document op basis van het sjabloon.
 - **Voor iedereen (aanbevolen)**: zet de sjablonen in een SharePoint-bibliotheek en maak daar een organisatie-assetbibliotheek van voor Office-sjablonen. Dan staan ze in Word en PowerPoint onder Nieuw. De beheerder doet dat eenmalig met `Add-SPOOrgAssetsLibrary -LibraryUrl <url> -OrgAssetType OfficeTemplateLibrary`.
 
+- **Met AI**: een AI die code kan uitvoeren, vult het sjabloon zelf met `skills/mmm-huisstijl/scripts/template.py` (zie "Documenten maken" in `SKILL.md`). Het zip-pakket van de skill in `dist/` bevat de sjablonen daarvoor al.
+
 In de sjablonen staan stijlen klaar: Titel, Kop 1 t/m 3, Bovenkop, Kernboodschap, Instructie (grijze cursieve uitleg die je weghaalt), Klein en Label. Gebruik die in plaats van zelf opmaak te kiezen. In PowerPoint kies je een indeling via Nieuwe dia.
 
 ## Letters

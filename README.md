@@ -25,7 +25,7 @@ In de map `dist/` staat de skill als zip-bestand, klaar om te uploaden. De besta
 
 | Bestand | Voor |
 | --- | --- |
-| `dist/mmm-huisstijl.zip` | Claude en ChatGPT (de hele skill, met logo's en letters) |
+| `dist/mmm-huisstijl.zip` | Claude en ChatGPT (de hele skill, met logo's, letters en de sjablonen, zodat de AI documenten in het echte sjabloon kan maken) |
 | `dist/mmm-huisstijl-copilot.zip` | Microsoft 365 Copilot (alleen de tekstbestanden en tokens) |
 
 Een geüploade skill is een kopie. Verandert de huisstijl, verwijder de oude skill dan en upload het nieuwe bestand.

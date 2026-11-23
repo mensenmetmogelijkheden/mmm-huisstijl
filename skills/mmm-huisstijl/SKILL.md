@@ -15,7 +15,7 @@ Gebruik deze skill voor alles wat namens Stichting Mensen Met Mogelijkheden (MMM
 | iets visueels: ontwerp, dia, poster, document met opmaak, webpagina | `references/visuele-identiteit.md` |
 | code (HTML/CSS) | `tokens/tokens.css` en `tokens/componenten.css`; letters in `fonts/` |
 | een ander formaat dat tokens leest | `tokens/tokens.json` |
-| een Word-document, presentatie of e-mail | de sjablonen in de map `templates/` van de repo `mensenmetmogelijkheden/mmm-huisstijl` |
+| een Word-document, presentatie of e-mail | "Documenten maken" hieronder, en de sjablonen in `templates/` |
 | iets met het logo | `assets/logo-mmm.svg` (standaard), `assets/beeldmerk-mmm.svg` of `.png` (zonder tekst, naast een getypte naam), `assets/logo-mmm-2000.png` (als svg niet werkt), `assets/logo-mmm-wit.svg` (op rood), `assets/logo-mmm-cmyk.pdf` (drukwerk), `assets/icon-512.png` (klein) |
 
 ## De kern in elf regels
@@ -31,6 +31,29 @@ Gebruik deze skill voor alles wat namens Stichting Mensen Met Mogelijkheden (MMM
 9. **Presentaties:** bovenkop in hoofdletters boven de titel, twee kleine gedraaide blokjes rechtsboven, één boodschap per dia, kernboodschap in een wit vlak met rode lijn, en een leesversie voor wie er niet bij was. Intranet en interne stukken: indigo is daar de hoofdkleur; extern rood.
 10. **Woorden:** bewoner (wonen), deelnemer (dagbesteding), cliënt (begeleiding thuis); nooit patiënt. Wat nog niet vastligt is een voornemen ("wij willen").
 11. **Privacy:** geen namen of herleidbare details van bewoners, deelnemers, cliënten of verwanten; foto's alleen met toestemming en met een beschrijving.
+
+## Documenten maken
+
+Maak een brief, notitie, beleidsstuk, presentatie of e-mailhandtekening altijd vanuit het sjabloon, nooit met eigen opmaak. In het sjabloon zitten het logo, de kop- en voettekst, de merkstrip en de stijlen; een nagebouwd document mist die.
+
+**Waar de sjablonen staan:** in `templates/` naast dit bestand (in het zip-pakket van de skill) of in de hoofdmap van de repo `mensenmetmogelijkheden/mmm-huisstijl`. Online: `https://raw.githubusercontent.com/mensenmetmogelijkheden/mmm-huisstijl/main/templates/<bestand>`. Medewerkers van MMM vinden ze ook op het intranet, op de pagina Huisstijl.
+
+**Kun je code uitvoeren,** vul dan het sjabloon zelf:
+
+1. Open het met `scripts/template.py`: `open_template("notitie")` geeft een python-docx-document (een python-pptx-presentatie voor `presentatie`), of `python3 scripts/template.py notitie uit.docx` maakt er een gewoon .docx van. `python3 scripts/template.py notitie --toon` laat de alinea's met hun stijl zien.
+2. Vervang de tekst tussen [haken], ook in de tabellen (Aan, Van, Datum, Status op het voorblad). Haal de grijze uitleg in de stijl Instructie weg met `remove_instructions(doc)`.
+3. Gebruik voor nieuwe alinea's alleen de stijlen uit het sjabloon: Title, Heading 1 t/m 3 (in een Nederlandse Word: Kop 1 t/m 3), Bovenkop, Kernboodschap, Label, Ondertitel, Klein, en List Paragraph voor opsommingen. Zet geen eigen letters, kleuren of maten.
+4. Laat het logo, de kop- en voettekst en de merkstrip staan. Een presentatie bouw je met de indelingen van het sjabloon (MMM Titel, MMM Sectie, enzovoort), niet met losse tekstvakken.
+
+**Kun je geen code uitvoeren,** geef dan de link naar het sjabloon en lever de tekst in de opbouw hieronder, zodat de gebruiker hem erin plakt.
+
+| Sjabloon | Bestand | Opbouw |
+| --- | --- | --- |
+| Brief | `MMM-brief.dotx` | adres van de ontvanger; Datum, Onderwerp, Contact; aanhef; eerste alinea: waarom we schrijven; tweede: wat er verandert of wat we vragen, en wat gelijk blijft; derde: wat de lezer kan doen en bij wie hij terecht kan; groet, naam, functie |
+| Notitie (voor bestuur, MT, Raad van Toezicht, OR, cliëntenraad) | `MMM-notitie.dotx` | bovenkop "Notitie · [onderwerp]"; titel; Aan, Van, Datum, Status; Samenvatting met een kernboodschap in één zin; Aanleiding; Voorstel; Gevolgen (Voor bewoners, deelnemers en cliënten; Voor medewerkers; Financieel); Medezeggenschap en toezicht (OR, cliëntenraad, Raad van Toezicht); Gevraagd besluit |
+| Beleidsstuk | `MMM-beleidsstuk.dotx` | voorblad met bovenkop "Beleid · [thema]", titel, ondertitel, Versie, Vastgesteld door, Datum vaststelling, Eigenaar (functie), Evaluatie; Inhoud; 1. Inleiding; 2. Uitgangspunten; 3. Werkwijze; 4. Rollen en verantwoordelijkheden; 5. Medezeggenschap; 6. Evaluatie; Versiebeheer |
+| Presentatie | `MMM-presentatie.potx` | indelingen voor titel, onderdeel (algemeen en per soort aanbod), titel en inhoud, twee kolommen, alleen titel en afsluiting; één boodschap per dia, en een leesversie voor wie er niet was |
+| E-mailhandtekening | `email/MMM-handtekening.html` | zie `templates/email/README.md` in de repo |
 
 ## Werkwijze
 
