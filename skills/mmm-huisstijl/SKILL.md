@@ -16,7 +16,7 @@ Gebruik deze skill voor alles wat namens Stichting Mensen Met Mogelijkheden (MMM
 | code (HTML/CSS) | `tokens/tokens.css` en `tokens/componenten.css`; letters in `fonts/` |
 | een ander formaat dat tokens leest | `tokens/tokens.json` |
 | een Word-document, presentatie of e-mail | "Documenten maken" hieronder, en de sjablonen in `templates/` |
-| iets met het logo | `assets/logo-mmm.svg` (standaard), `assets/beeldmerk-mmm.svg` of `.png` (zonder tekst, naast een getypte naam), `assets/logo-mmm-2000.png` (als svg niet werkt), `assets/logo-mmm-wit.svg` (op rood), `assets/logo-mmm-cmyk.pdf` (drukwerk), `assets/icon-512.png` (klein) |
+| iets met het logo | `assets/logo-mmm.svg` (standaard), `assets/logo-mmm-liggend.svg` (breed en laag), `assets/beeldmerk-mmm.svg` of `.png` (zonder tekst, naast een getypte naam), `assets/beeldmerk-klein.svg` (16 tot 48 px), `assets/logo-mmm-zwart.svg` (één kleur), `assets/logo-mmm-2000.png` (als svg niet werkt), `assets/logo-mmm-wit.svg` (op rood), `assets/logo-mmm-cmyk.pdf` (drukwerk), `assets/icon-512.png` (klein) |
 
 ## De kern in elf regels
 

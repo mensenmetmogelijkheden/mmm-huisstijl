@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Klein beeldmerk Mensen Met Mogelijkheden" width="32" height="32" viewBox="0 0 32 32">
+<!-- Small version of the MMM mark for 16 to 48 px (favicon, app icon, avatar). Larger sizes: beeldmerk-mmm.svg. -->
+<circle cx="16" cy="4.6" r="4.2" fill="#e30613"/>
+<path d="M0.5 8.2H7.6L14.6 31.5M31.5 8.2H24.4L17.4 31.5" fill="none" stroke="#e30613" stroke-width="2.6"/>
+<rect x="0.5" y="11" width="6.6" height="6.2" fill="#e30613"/>
+<rect x="0.5" y="18.4" width="6.6" height="6.2" fill="#312783"/>
+<rect x="0.5" y="25.8" width="6.6" height="6.2" fill="#96c11f"/>
+<rect x="24.9" y="11" width="6.6" height="6.2" fill="#009fe3"/>
+<rect x="24.9" y="18.4" width="6.6" height="6.2" fill="#ffed00"/>
+<rect x="24.9" y="25.8" width="6.6" height="6.2" fill="#662483"/>
+</svg>

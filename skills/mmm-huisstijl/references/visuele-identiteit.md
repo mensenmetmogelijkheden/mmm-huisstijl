@@ -111,19 +111,25 @@ Alle logobestanden staan in de map `assets/` van deze skill.
 | Bestand | Wanneer |
 | --- | --- |
 | `logo-mmm.svg` | Standaard, voor scherm: website, MMM-Web, presentaties, documenten. Schaalt zonder kwaliteitsverlies. |
-| `beeldmerk-mmm.svg` / `beeldmerk-mmm.png` | Het logo zonder tekst: figuurtje en zes vierkantjes. Naast het getypte woordmerk (kop van de website, sjablonen), en als favicon en profielfoto. |
+| `logo-mmm-liggend.svg` | Liggend logo: beeldmerk met de naam ernaast, in de originele letters van het logo. Waar het logo breed en laag moet zijn: kop van de website, briefhoofd, e-mailhandtekening, banner. |
+| `logo-mmm-liggend-wit.svg` | Liggend logo in wit, voor op een `rood` vlak. |
+| `beeldmerk-mmm.svg` / `beeldmerk-mmm.png` | Het logo zonder tekst: figuurtje en zes vierkantjes. Naast een getypte naam (sjablonen), vanaf 48 px. |
+| `beeldmerk-klein.svg` | Klein beeldmerk voor 16 tot 48 px: favicon, app-icoon, profielfoto. Hetzelfde figuurtje met dichte armen en grotere vierkantjes, zodat het klein herkenbaar blijft. Niet groter gebruiken: daarboven het gewone beeldmerk. |
+| `beeldmerk-klein-16.svg` | Het kleine beeldmerk op hele pixels, alleen voor precies 16 px (favicon). |
 | `beeldmerk-mmm-wit.svg` | Beeldmerk met het figuurtje en het rode vierkantje in wit, voor op een `rood` vlak. |
 | `logo-mmm-2000.png` | Waar svg niet werkt (sommige versies van Word en PowerPoint, social media). |
 | `logo-mmm-wit.svg` / `logo-mmm-wit-2000.png` | Op een `rood` vlak (daar is hij voor gemaakt) of op een donkere foto of de donkere band. |
+| `logo-mmm-zwart.svg` / `logo-mmm-wit-eenkleurig.svg` | Het logo in één kleur (zwart of helemaal wit). Alleen als er maar één kleur kan: stempel, borduren, gravure, drukwerk in één kleur, een krant in zwart-wit. |
 | `logo-mmm-cmyk.pdf` | Drukwerk: het originele ontwerpbestand in CMYK. Geef dit aan de drukker. |
 | `logo-mmm.png` | Klein logo zoals op de website (430 x 413 px). |
-| `icon-512.png` | App-icoon: favicon, profielfoto op social media en andere kleine plekken. |
+| `icon-512.png` | App-icoon uit het kleine beeldmerk: profielfoto op social media en andere kleine plekken. |
 
 - Gebruik het kleurenlogo op een lichte ondergrond (`room`, `kaart`, wit), het witte logo op `rood`.
 - Op de donkere band of een donkere foto mag het witte logo ook, maar daar vallen de vierkantjes in `indigo` en `paars` deels weg. Kies daarom liever een rood vlak.
-- Niet vervormen, niet opnieuw tekenen, geen schaduw, geen andere kleuren, niet op blauw, groen of geel.
+- Niet vervormen, niet opnieuw tekenen, geen schaduw, geen andere kleuren, niet op blauw, groen of geel. De enige uitzondering is de eenkleurige versie (zwart of wit), en alleen waar kleur niet kan.
 - Laat er minstens de breedte van één vierkantje vrije ruimte omheen.
 - Is de naam al getypt in de buurt (een kop, een sjabloon), gebruik dan het beeldmerk in plaats van het volledige logo, zodat de naam er niet twee keer staat.
+- Kleiner dan 48 px: het kleine beeldmerk. Het gewone beeldmerk heeft dunne krijtarmen die klein wegvallen.
 - Het figuurtje heeft bewust een krijtachtige rand: dat is geen fout in het bestand.
 
 ## Waar de huisstijl staat
@@ -196,7 +202,7 @@ Voor Word, PowerPoint, Canva en andere programma's waarin je kleuren als RGB inv
 | `tekst` | #241f1a | 36,31,26 | #e7e1d8 | Lopende tekst en koppen (15,65:1 op room). Ook de achtergrond van de donkere band en de footer. Donker: #e7e1d8 (12,27:1 op kaart). |
 | `tekst-kop` | #241f1a | 36,31,26 | #f4efe7 | Koppen. In licht gelijk aan tekst; in donker iets lichter (13,93:1 op kaart). |
 | `tekst-mild` | #5c554c | 92,85,76 | #b9b0a4 | Ondertitels, toelichting en kleine tekst (7,04:1 op room, 6,58:1 op band). Donker: #b9b0a4 (7,45:1 op kaart). |
-| `tekst-zacht` | #857c70 | 133,124,112 | #a79e92 | Alleen voor meta-informatie van minstens 16px in MMM-Web (3,93:1): niet voor lopende tekst. |
+| `tekst-zacht` | #736b61 | 115,107,97 | #a79e92 | Meta-informatie zoals datums en labels, minstens 16px (5,02:1 op room, 4,70:1 op band): niet voor lopende tekst. |
 | `rand` | #e6e0d4 | 230,224,212 | #3a332c | Scheidingslijnen en tabelregels. Decoratief. |
 | `rand-sterk` | #b9ae9c | 185,174,156 | #6f675d | Duidelijkere scheiding, randen van invoervelden in MMM-Web. Decoratief (2,10:1); voor een veldrand op de website veldrand gebruiken. Donker: #6f675d. |
 | `veldrand` | #8f8576 | 143,133,118 | #5a5148 | Rand van invoervelden op de website (3,48:1 op room). Donker: #5a5148 (zoals in MMM-Web), maar dat haalt op kaart maar 2,05:1, onder de 3:1 voor een veldrand. Verbeterpunt voor het MMM-Web-thema. |
